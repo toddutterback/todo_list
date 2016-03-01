@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'static_page#home'
+  root 'static_pages#home'
 
-  get '/about', to: 'static_page#about',as: 'about'
+  get '/about', to: 'static_pages#about',as: 'about'
 
   resources :todos
 

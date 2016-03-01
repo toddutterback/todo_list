@@ -1,6 +1,6 @@
 class TodosController < ApplicationController
   def index
-    @todos = Todo.all
+    @todos = Todo.all.order(:priority)
   end
 
   def show
@@ -11,10 +11,10 @@ class TodosController < ApplicationController
     @todo = Todo.new
   end
 
-  def create
+  def creates
     @todo = Todo.new(todo_params)
     if @todo.save
-      redirect_to todo_path
+      redirect_to todos_path
     else
       render :new
     end
