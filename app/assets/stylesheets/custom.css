@@ -1,9 +1,13 @@
 body{
-  color: #144852;
+  color: #650066;
   font-family: 'Open Sans', sans-serif;
   background-image: url(https://openclipart.org/image/2400px/svg_to_png/196364/check.png);
   background-size: 100%;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+}
+
+h4 {
+  text-align: center;
 }
