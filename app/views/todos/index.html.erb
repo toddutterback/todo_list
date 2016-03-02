@@ -1,9 +1,10 @@
 <h1>To-Do List</h1>
 <h4><%= link_to 'New To-Do', new_todo_path %></h4>
 <% @todos.each do |todo| %>
-  <p> <strong><%= todo.title %></strong> (<%= todo.priority %>) <small><%= todo.body %></small></p>
-  <h6><%= link_to 'Show To-Do List', todo_path(todo) %>
+  <p><strong><%= todo.title %></strong> (<%= todo.priority %>) <small><%= todo.body %></small></p>
+  <p><small><%= check_box_tag(:complete_todo) %> <%= label_tag(:complete_todo, "Completed") %></small></p>
+  <footer><small><%= link_to 'Show To-Do List', todo_path(todo) %>
   <%= link_to 'Edit To-Do', edit_todo_path(todo) %>
-  <%= link_to 'Delete To-Do', todo, method: :delete %></h6>
+  <%= link_to 'Delete To-Do', todo, method: :delete %></small></footer>
 <% end %>
 
